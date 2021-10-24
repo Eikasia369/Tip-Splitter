@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="main.css">
+	<script src="main.js">
+
+	</script>
+
+	<title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+
+	<main>
+		<form>
+			<label for="bill-amount">Bill</label><br>
+      <input type="text" id="bill-amount" name="bill-amount" value="0" placeholder="0"><br>
+      <label>Select Tip %</label><br>
+      <div class="btn-container">
+      <input type="button" id="5-perc" name="5-perc" value="5%" onclick="calcFivePercent()">
+      <input type="button" id="10-perc" name="10-perc" value="10%" onclick="calcTenPercent()">
+      <input type="button" id="15-perc" name="15-perc" value="15%" onclick="calcfifteenPercent()">
+      <input type="button" id="25-perc" name="25-perc" value="25%" onclick="calcTwentyFivePercent()">
+      <input type="button" id="50-perc" name="50-perc" value="50%" onclick="calcfiftyPercent()">
+      <input type="number" id="custom-perc" name="bill-amount" value=" " placeholder="Custom" onchange="calcCustomPercent()">
+    </div>
+      <label for="number-of-people">Number of People</label><br>
+      <input type="text" id="number-of-people" name="number-of-people" value="0" placeholder="0">
+    <div class="totals">
+      <div>  
+        <div class="box1">    
+          <p>Tip Amount</p>
+          <p>/person</p>
+        </div>
+        <div class="box2">
+          <p id="tip-total" class="amount">$5,50</p>
+        </div>
+      </div>
+      <div >
+        <div class="box1">
+          <p>Total</p>
+          <p>/ person</p>
+        </div>
+        <div class="box2">
+          <p id="total-per-person" class="amount">$12,50</p>
+        </div>
+      </div>
+      
+      <input id="btn-reset" type="button" onclick="resetAll()" value="RESET">
+    </div>
+  </form>
+</main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Maximiliano Zaldua</a>.
+  </div>
+</body>
+</html>
